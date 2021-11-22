@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import { KinesisContainer, KinesisElement }from 'vue-kinesis';
-
 import router from './router';
 import App from './App.vue'
 import '../src/assets/tailwind.css'

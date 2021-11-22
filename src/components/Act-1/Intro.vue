@@ -1,5 +1,21 @@
+<script setup>
+  import { gsap } from 'gsap';
+  import { onMounted } from 'vue';
+
+  onMounted(() => {
+    gsap.registerPlugin(SplitText)
+
+    gsap.from('.chat-left', {
+      duration: 1,
+      x: -200,
+      opacity: 0,
+      ease: 'bounce'
+    })
+  })
+</script>
+
 <template>
-    <kinesis-container :duration=4000 :perspective=4000>
+  <kinesis-container :duration=4000 :perspective=4000>
     <kinesis-element :strength="10" axis="x">
       <section class="w-full overflow-hidden relative font-comfortaa font-extrabold" style="background-image: url(bg/bg6.png)">
         <div class="w-full">
@@ -8,9 +24,9 @@
               <kinesis-element :strength="20" type="depth_inv" :originY=100 axis="x">
                 <div class="w-96 h-96 bg-fill bg-no-repeat bg-center bg-contain" style="background-image: url(caracter/quotes1.png)"></div>
               </kinesis-element>
-              <kinesis-element axis="y" type="depth_inv" :originY=100 class="absolute top-5 w-44 -left-12">
+              <kinesis-element axis="y" type="depth_inv" :originY=100 class="chat-left absolute top-5 w-44 -left-12">
                 <img src="chat/chat-1.svg" alt="">
-                <p class="absolute top-4 left-4 antialiased">hayyy</p>
+                <p class="absolute top-4 left-4 antialiased" id="text-1">hayyy</p>
               </kinesis-element>
             </div>
           </div>
