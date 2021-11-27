@@ -13,5 +13,7 @@ app.component('kinesis-container', KinesisContainer)
 app.component('kinesis-element', KinesisElement)
 
 app.use(router)
-app.use(AOS.init());
+app.use(AOS.init({
+  once: true
+}));
 app.mount('#app')
