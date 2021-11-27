@@ -7,8 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "vue": "^3.2.22",
-    "vue-kinesis": "^2.0.5",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
