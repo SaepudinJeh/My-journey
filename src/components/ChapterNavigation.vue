@@ -10,7 +10,7 @@
 </script>
 
 <template>
-  <section class="z-40 fixed w-8 md:w-16 py-4 md:py-12 rounded-tl-3xl rounded-bl-3xl top-14 md:top-1/4 right-0 object-cover filter drop-shadow-lg" style="background-image: url(bg/bg2.jpg)">
+  <section class="md:block hidden z-40 fixed w-8 md:w-16 py-4 md:py-12 rounded-tl-3xl rounded-bl-3xl top-14 md:top-1/4 right-0 object-cover filter drop-shadow-lg" style="background-image: url(bg/bg2.jpg)">
     <div class="flex items-center my-auto">
       <div class="flex flex-col gap-y-4 md:gap-y-10 m-auto">
         <a v-for="navigation in navigations" :key="navigation" :href="navigation.link" class="">

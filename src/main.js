@@ -1,18 +1,15 @@
 import { createApp } from 'vue'
-import { KinesisContainer, KinesisElement }from 'vue-kinesis';
 import AOS from 'aos';
 
+import '../src/assets/tailwind.css'
 import 'aos/dist/aos.css';
 import router from './router';
 import App from './App.vue';
 
-const app = createApp(App)
-
-app.component('kinesis-container', KinesisContainer)
-app.component('kinesis-element', KinesisElement)
+const app = createApp(App);
 
 app.use(router)
 app.use(AOS.init({
-  once: false
+  once: true
 }));
 app.mount('#app')
